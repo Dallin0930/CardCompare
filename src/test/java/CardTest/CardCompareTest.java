@@ -43,4 +43,14 @@ public class CardCompareTest {
         String result = handle.compare(player1,player2);
         Assert.assertEquals("player1",result);
     }
+    @Test
+    public void should_return_peace_when_input_3C4D6H8S9D_3C4D6H8S8D(){
+        List<String> cards1 = Arrays.asList("3C","4D","6H","8S","9D");
+        List<String> cards2 = Arrays.asList("3C","4D","6H","8S","9D");
+        Handle handle = new Handle();
+        Player player1 = new Player("player1",cards1);
+        Player  player2 = new Player("player2",cards2);
+        String result = handle.compare(player1,player2);
+        Assert.assertEquals("peace",result);
+    }
 }
