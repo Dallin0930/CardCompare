@@ -1,6 +1,7 @@
 package CardCompare;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Handle{
@@ -8,18 +9,26 @@ public class Handle{
         List<String> str1 = player1.getCards();
         List<String> str2 = player2.getCards();
 
-        List<String> newStr1=CharTranNum(str1);
-        List<String> newStr2=CharTranNum(str2);
+        List<Integer> newStr1=CharTranNum(str1);      //處理後的fiveNumber集合
+        List<Integer> newStr2=CharTranNum(str2);
 
-        if(str1.get(0).charAt(0)>str2.get(0).charAt(0)){
-            return player1.getPlayName();
-        }else{
-            return player2.getPlayName();
+        Collections.sort(newStr1);
+        Collections.sort(newStr2);
+
+        for(int i= 0;i<=4;i++){
+            if(newStr1.get(i)>newStr2.get(i)){
+                return player1.getPlayName();
+            }else if(newStr1.get(i)>newStr2.get(i)){
+               return player2.getPlayName();
+            }
         }
+        return "peace";
     }
 
-    private List<String> CharTranNum(List<String> str) {
+    private List<Integer> CharTranNum(List<String> str) {
         List<String> newCards = new ArrayList<>();
+        List<Integer> FiveNumList = new ArrayList<>();
+
         for(int i=0;i<str.size();i++){
             String singleStr = str.get(i);
             switch(singleStr.charAt(0)){
@@ -42,7 +51,13 @@ public class Handle{
             String TwoChar = singleStr + singleStr.charAt(1);
             newCards.add(TwoChar);
         }
-        return newCards;
+
+        for(int i=0;i<newCards.size();i++){
+            char ch = newCards.get(i).charAt(0);
+            int number=Integer.parseInt(String.valueOf(ch));
+            FiveNumList.add(number);
+        }
+        return FiveNumList;
     }
 
 }
