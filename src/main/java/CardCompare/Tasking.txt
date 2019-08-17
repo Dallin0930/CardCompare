@@ -1,0 +1,30 @@
+case1:
+     player1:[4D]
+     player2:[6H]
+     winer:player2
+
+case2:
+     player1:[4D]
+     player2:[TH]
+     winer:player2
+
+case3:
+     player1:[3C,4D,6H,8S,9D]
+     player2:[3C,4D,6H,7S,8D]
+     winer:player2
+
+case4:
+     player1:[3C,4D,6H,8S,9D]
+     player2:[3C,4D,6H,7S,9D]
+     winer:player1
+
+case5:
+     player1:[3C,4D,6H,8S,9D]
+     player2:[3C,3D,6H,7S,8D]
+     winer:player2
+
+case6:
+     player1:[4C,4D,6H,8S,5D]
+     player2:[3C,3D,6H,7S,8D]
+     winer:player1
+
