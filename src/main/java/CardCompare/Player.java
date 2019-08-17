@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Player {
      private String playName;
-     List<String> cards ;
+     List<String> cards;
 
      public Player(String playName, List<String> cards) {
         this.playName = playName;
@@ -15,7 +15,9 @@ public class Player {
     public String getPlayName() {
         return playName;
     }
+
     public List<String> getCards() {
         return cards;
     }
 }
+
