@@ -7,7 +7,7 @@ public class Handle{
     public String compare(Player player1, Player player2) {
         List<String> str1 = player1.getCards();
         List<String> str2 = player2.getCards();
-        
+
         List<String> newStr1=CharTranNum(str1);
         List<String> newStr2=CharTranNum(str2);
 
