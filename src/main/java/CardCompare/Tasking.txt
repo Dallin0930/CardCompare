@@ -41,4 +41,8 @@ case8:
      player2:[6H,6D,4S,4C,8D]
      winer:player2
 
+case9:
+     player1:[2H,2D,5S,5C,8D]
+     player2:[3H,3D,4S,4C,9D]
+     winer:peace
 
