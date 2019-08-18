@@ -15,14 +15,30 @@ public class Handle{
         Collections.sort(newStr1);
         Collections.sort(newStr2);
 
-        HashSet<Integer> singleStr1 = new HashSet<>(newStr1);    //得到去重後的Set集合
+        HashSet<Integer> singleStr1 = new HashSet<>(newStr1);     //得到去重後的Set集合
         HashSet<Integer> singleStr2 = new HashSet<>(newStr2);
+        List<Integer> noMultiList1 = new ArrayList<>(singleStr1);         //Int型非重複元素集合
+        List<Integer> noMultiList2 = new ArrayList<>(singleStr2);
+
 
         Collection singleChar1 = CollectionUtils.disjunction(newStr1,singleStr1);    //獲取重複元素
         Collection singleChar2 = CollectionUtils.disjunction(newStr2,singleStr2);
-        List<Integer> singleNum1 = new ArrayList<>(singleChar1);
+        List<Integer> singleNum1 = new ArrayList<>(singleChar1);          //Int型重複元素集合
         List<Integer> singleNum2 = new ArrayList<>(singleChar2);
 
+        boolean resultTag=false;
+        if(noMultiList2.size()==5&&noMultiList1.size()<5){
+            for(int i=0,j=i+1;i<noMultiList2.size()-1;i++){
+                boolean tag= noMultiList2.get(i) + 1 == noMultiList2.get(j);
+                resultTag = tag;
+                if(!resultTag){
+                    return player2.getPlayName();
+                }
+            }
+            if(resultTag){
+                return player1.getPlayName();
+            }
+        }
 
         if(singleChar1.size()!=0 && singleChar2.size()!=0){
             if(singleStr1.size()<singleStr2.size()){

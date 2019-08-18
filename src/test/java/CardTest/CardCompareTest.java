@@ -124,9 +124,9 @@ public class CardCompareTest {
         Assert.assertEquals("player2",result);
     }
     @Test
-    public void should_return_player2_when_input_3D3H3D5S9C_3H4D5S6C7D(){
-        List<String> cards1 = Arrays.asList("3D","3H","3D","5S","9C");
-        List<String> cards2 = Arrays.asList("3H","4D","5S","6C","7D");
+    public void should_return_player2_when_input_3D3H3D5S7C_3H4D5S6C9D(){
+        List<String> cards1 = Arrays.asList("3D","3H","3D","5S","7C");
+        List<String> cards2 = Arrays.asList("5H","6D","7S","8C","9D");
         Handle handle = new Handle();
         Player player1 = new Player("player1",cards1);
         Player  player2 = new Player("player2",cards2);
