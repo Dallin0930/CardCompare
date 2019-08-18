@@ -29,7 +29,7 @@ public class Handle{
                 return player1.getPlayName();
             }else if(singleStr1.size()>singleStr2.size()){
                 return player2.getPlayName();
-            }else{
+            }else{             //求和方式判斷
                 int sum1 = 0;
                 int sum2 = 0;
                 for(int i=0;i<singleChar1.size();i++){
@@ -45,11 +45,6 @@ public class Handle{
                 }else{
                     return "peace";
                 }
-//                if(singleNum1.get(0)<singleNum2.get(0)){
-//                    return player2.getPlayName();
-//                }else if(singleNum1.get(0)>singleNum2.get(0)){
-//                    return player1.getPlayName();
-//                }
             }
         }
         for(int i= 0;i<= newStr1.size()-1;i++){
