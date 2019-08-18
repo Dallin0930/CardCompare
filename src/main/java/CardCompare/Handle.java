@@ -27,14 +27,23 @@ public class Handle{
         if(singleChar1.size()!=0 && singleChar2.size()!=0){
             if(singleStr1.size()<singleStr2.size()){
                 return player1.getPlayName();
-            }
-            if(singleStr1.size()== singleStr2.size()){
+            }else if(singleStr1.size()>singleStr2.size()){
+                return player2.getPlayName();
+            }else{
                 if(singleNum1.get(0)<singleNum2.get(0)){
                     return player2.getPlayName();
                 }else if(singleNum1.get(0)>singleNum2.get(0)){
                     return player1.getPlayName();
                 }
             }
+
+//            if(singleStr1.size()== singleStr2.size()){
+//                if(singleNum1.get(0)<singleNum2.get(0)){
+//                    return player2.getPlayName();
+//                }else if(singleNum1.get(0)>singleNum2.get(0)){
+//                    return player1.getPlayName();
+//                }
+//            }
         }
         for(int i= 0;i<= newStr1.size()-1;i++){
             if(newStr1.get(i)>newStr2.get(i)){
