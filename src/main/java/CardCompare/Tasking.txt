@@ -46,3 +46,14 @@ case9:
      player2:[3H,3D,4S,4C,9D]
      winer:peace
 
+levelFour
+case10:
+     player1:[3D,3H,3D,5S,8C]
+     player2:[3D,3H,4D,5S,9C]
+     winer:player1
+
+case11:
+     player1:[3D,3H,3D,5S,9C]
+     player2:[4D,4H,4D,5S,8C]
+     winer:player2
+
