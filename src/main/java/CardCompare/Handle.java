@@ -2,6 +2,7 @@ package CardCompare;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 
 public class Handle{
@@ -15,17 +16,25 @@ public class Handle{
         Collections.sort(newStr1);
         Collections.sort(newStr2);
 
+        HashSet<Integer> singleStr1 = new HashSet<>(newStr1);
+        HashSet<Integer> singleStr2 = new HashSet<>(newStr2);
 
-        for(int i= 0;i<= newStr1.size()-1;i++){
-            if(newStr1.get(i)>newStr2.get(i)){
-                return player1.getPlayName();
-            }
-            if(newStr1.get(i)>newStr2.get(i)){
-               return player2.getPlayName();
+        if(singleStr1.size()<singleStr2.size()){
+            return player1.getPlayName();
+        }
+        if(singleStr1.size()== singleStr2.size()){
+            for(int i= 0;i<= newStr1.size()-1;i++){
+                if(newStr1.get(i)>newStr2.get(i)){
+                    return player1.getPlayName();
+                }
+                if(newStr1.get(i)>newStr2.get(i)){
+                    return player2.getPlayName();
+                }
             }
         }
         return "peace";
     }
+
 
     private List<Integer> CharTranNum(List<String> str) {
         List<String> newCards = new ArrayList<>();
