@@ -57,3 +57,13 @@ case11:
      player2:[4D,4H,4D,5S,8C]
      winer:peace
 
+levelFive
+case12:
+     player1:[3D,3H,3D,5S,9C]
+     player2:[3H,4D,5S,6C,7D]
+     winer:player2
+
+case13:
+     player1:[3H,4D,5S,6C,7D]
+     player2:[5H,6D,7S,8C,9D]
+     winer:player2
