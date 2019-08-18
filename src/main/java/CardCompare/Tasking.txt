@@ -55,5 +55,5 @@ case10:
 case11:
      player1:[3D,3H,3D,5S,9C]
      player2:[4D,4H,4D,5S,8C]
-     winer:player2
+     winer:peace
 

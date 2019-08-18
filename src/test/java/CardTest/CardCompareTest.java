@@ -113,5 +113,14 @@ public class CardCompareTest {
         String result = handle.compare(player1,player2);
         Assert.assertEquals("player1",result);
     }
-
+    @Test
+    public void should_return_peace_when_input_3D3H3D5S9C_3D3H4D5S9C(){
+        List<String> cards1 = Arrays.asList("3D","3H","3D","5S","9C");
+        List<String> cards2 = Arrays.asList("4D","4H","4D","5S","8C");
+        Handle handle = new Handle();
+        Player player1 = new Player("player1",cards1);
+        Player  player2 = new Player("player2",cards2);
+        String result = handle.compare(player1,player2);
+        Assert.assertEquals("player2",result);
+    }
 }
