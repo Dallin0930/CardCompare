@@ -20,7 +20,7 @@ public class CardCompareTest {
          Player player1 = new Player("player1",cards1);
          Player player2 = new Player("player2",cards2);
          String result = handle.compare(player1,player2);
-         Assert.assertEquals("player",result);
+         Assert.assertEquals("player2",result);
     }
 
     @Test
