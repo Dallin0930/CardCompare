@@ -18,9 +18,9 @@ public class CardCompareTest {
          List<String> cards2 = Arrays.asList("6H");
          Handle handle = new Handle();
          Player player1 = new Player("player1",cards1);
-         Player  player2 = new Player("player2",cards2);
+         Player player2 = new Player("player2",cards2);
          String result = handle.compare(player1,player2);
-         Assert.assertEquals("player2",result);
+         Assert.assertEquals("player",result);
     }
 
     @Test
@@ -52,5 +52,15 @@ public class CardCompareTest {
         Player  player2 = new Player("player2",cards2);
         String result = handle.compare(player1,player2);
         Assert.assertEquals("peace",result);
+    }
+    @Test
+    public void should_return_player1_when_input_3H3D5S7C8D_2H3D5S7C9D(){
+        List<String> cards1 = Arrays.asList("3H","3D","5S","7C","8D");
+        List<String> cards2 = Arrays.asList("2H","3D","5S","7C","9D");
+        Handle handle = new Handle();
+        Player player1 = new Player("player1",cards1);
+        Player  player2 = new Player("player2",cards2);
+        String result = handle.compare(player1,player2);
+        Assert.assertEquals("player1",result);
     }
 }

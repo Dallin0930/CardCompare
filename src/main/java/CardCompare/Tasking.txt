@@ -1,3 +1,4 @@
+levelOne
 case1:
      player1:[4D]
      player2:[6H]
@@ -18,16 +19,26 @@ case4:
      player2:[3C,4D,6H,8S,9D]
      winer:player1
 
-
-
-
+levelTwo
 case5:
-     player1:[3C,4D,6H,8S,9D]
-     player2:[3C,3D,6H,7S,8D]
-     winer:peace
+     player1:[3H,3D,5S,7C,8D]
+     player2:[2H,3D,5S,7C,9D]
+     winer:player1
 
 case6:
-     player1:[4C,4D,6H,8S,5D]
-     player2:[3C,3D,6H,7S,8D]
+     player1:[3H,3D,5S,7C,9D]
+     player2:[4H,4D,5S,7C,8D]
+     winer:player2
+
+levelThree
+case7:
+     player1:[3H,3D,5S,5C,8D]
+     player2:[6H,6D,5S,7C,9D]
      winer:player1
+
+case8:
+     player1:[3H,3D,5S,5C,9D]
+     player2:[6H,6D,4S,4C,8D]
+     winer:player2
+
 

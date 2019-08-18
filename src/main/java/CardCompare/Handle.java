@@ -15,10 +15,12 @@ public class Handle{
         Collections.sort(newStr1);
         Collections.sort(newStr2);
 
-        for(int i= 0;i<=4;i++){
+
+        for(int i= 0;i<= newStr1.size()-1;i++){
             if(newStr1.get(i)>newStr2.get(i)){
                 return player1.getPlayName();
-            }else if(newStr1.get(i)>newStr2.get(i)){
+            }
+            if(newStr1.get(i)>newStr2.get(i)){
                return player2.getPlayName();
             }
         }
