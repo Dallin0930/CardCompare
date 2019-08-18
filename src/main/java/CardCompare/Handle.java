@@ -30,11 +30,26 @@ public class Handle{
             }else if(singleStr1.size()>singleStr2.size()){
                 return player2.getPlayName();
             }else{
-                if(singleNum1.get(0)<singleNum2.get(0)){
-                    return player2.getPlayName();
-                }else if(singleNum1.get(0)>singleNum2.get(0)){
-                    return player1.getPlayName();
+                int sum1 = 0;
+                int sum2 = 0;
+                for(int i=0;i<singleChar1.size();i++){
+                    sum1+=singleNum1.get(i);
                 }
+                for(int i=0;i<singleChar2.size();i++){
+                    sum2+=singleNum2.get(i);
+                }
+                if(sum1>sum2){
+                    return player1.getPlayName();
+                }else if(sum1<sum2){
+                    return player2.getPlayName();
+                }else{
+                    return "peace";
+                }
+//                if(singleNum1.get(0)<singleNum2.get(0)){
+//                    return player2.getPlayName();
+//                }else if(singleNum1.get(0)>singleNum2.get(0)){
+//                    return player1.getPlayName();
+//                }
             }
         }
         for(int i= 0;i<= newStr1.size()-1;i++){
